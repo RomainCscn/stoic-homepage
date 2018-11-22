@@ -1,16 +1,8 @@
+/** Global style **/
+
 body {
   margin: 0;
   background-color: #F0F0DF;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  color: #3F5866;
-}
-
-footer a {
-  margin-left: 12px;
 }
 
 a {
@@ -21,7 +13,27 @@ a:hover {
   color: #007BBA;
 }
 
-.main {
+.container {
+  max-width: 75%;
+}
+
+/** Footer style **/
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #3F5866;
+  margin: 2rem auto;
+}
+
+.footer-item {
+  margin-left: 12px;
+}
+
+/** Home page **/
+
+.quote-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +44,7 @@ a:hover {
   color: #343d46;
   display: flex;
   flex-direction: column;
-  max-width: 75%;
+  margin: 2rem 0;
 }
 
 .quote-content {
@@ -48,13 +60,13 @@ a:hover {
 }
 
 @media all and (max-width: 1023px) {
-  .quote {
+  .container {
     max-width: 80%;
   }
 }
 
 @media all and (max-width: 767px) {
-  .quote {
+  .container {
     max-width: 85%;
   }
   .quote-content {
