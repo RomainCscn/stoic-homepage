@@ -73,7 +73,7 @@ footer {
   flex-wrap: wrap;
 }
 
-.footer-item, .header-item {
+.header-item {
   margin-left: 12px;
 }
 
@@ -141,6 +141,9 @@ header a:hover, footer a:hover {
 }
 
 @media all and (max-width: 450px) {
+  .header-item {
+    margin-left: 6px;
+  }
   .container {
     max-width: 90%;
   }
