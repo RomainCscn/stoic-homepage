@@ -9,6 +9,11 @@ body {
   padding: 4em 1em 2rem;
 }
 
+body.dark {
+  color: #F0F0DF;
+  background-color: #343d46;
+}
+
 .main {
   margin: 0 auto;
   max-width: 50em;
@@ -21,10 +26,21 @@ body {
 
 a {
   color: #007BBA;
+  text-decoration: none;
+}
+
+a.dark {
+  color: rgb(153, 221, 255);
 }
 
 a:hover {
+  text-decoration: underline;
   color: rgb(4, 82, 121);
+}
+
+a.dark:hover {
+  text-decoration: underline;
+  color: rgb(14, 175, 255);
 }
 
 h1 {
@@ -66,6 +82,10 @@ footer a, header a {
   text-decoration: none;
 }
 
+footer.dark a, header.dark a {
+  color: #F0F0DF;
+}
+
 header a:hover, footer a:hover {
   text-decoration: underline;
 }
@@ -84,6 +104,10 @@ header a:hover, footer a:hover {
   color: #343d46;
   display: flex;
   flex-direction: column;
+}
+
+.quote.dark {
+  color: #F0F0DF;
 }
 
 .quote-content {

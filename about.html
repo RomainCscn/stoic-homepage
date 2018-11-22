@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Stoic start page</title>
+  <title>About stoic start page</title>
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Playfair+Display:400" rel="stylesheet">
 </head>
@@ -24,10 +24,18 @@
     </div>
   </footer>
   <script src="header.js"></script>
-  <script src="footer.js"></script>
+  <script src="customize.js"></script>
   <script>
+    const body = document.querySelector('body');
     const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+    const links = document.querySelectorAll('a');
+
     header.innerHTML = headerContent;
+
+    if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
+      setDarkClass(true, [body, footer, header].concat(Array.from(links)));
+    }
   </script>
 </body>
 </html>

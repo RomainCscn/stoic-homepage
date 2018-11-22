@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Customize</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Playfair+Display:400" rel="stylesheet">
+</head>
+<body>
+  <header></header>
+  <section class="main">
+    <h1>Customize this website</h1>
+  
+    <p>If you use the home page as your start page, you may wish to customize the theme. Your preference will be kept even if you close the page.</p>
+  
+    Choose a theme:
+    <form>
+      <input type="radio" name="theme" id="light" value="light" checked/>
+      <label for="light">Light</label>
+      <input type="radio" name="theme" id="dark" value="dark"/>
+      <label for="dark">Dark</label>
+    </form>
+  </section>
+  <footer class="container">
+    <div class="footer-row">
+      © Romain Cascino &#8211; 2018
+    </div>
+  </footer>
+  <script src="header.js"></script>
+  <script src="customize.js"></script>
+  <script>
+    const body = document.querySelector('body');
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+    const light = document.querySelector('#light');
+    const dark = document.querySelector('#dark');
+    
+    header.innerHTML = headerContent;
+
+    if (localStorage.getItem('theme')) {
+      localStorage.getItem('theme') === 'light' ? light.checked = true : dark.checked = true;
+    }
+
+    if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
+      setDarkClass(true, [body, footer, header]);
+    }
+    
+    light.addEventListener('change', () => {
+      localStorage.setItem('theme', 'light');
+      setDarkClass(false, [body, footer, header]);
+    });
+
+    dark.addEventListener('change', () => {
+      localStorage.setItem('theme', 'dark');
+      setDarkClass(true, [body, footer, header]);
+    });
+  </script>
+</body>
+</html>

@@ -46,9 +46,18 @@
     </div>
   </footer>
   <script src="header.js"></script>
+  <script src="customize.js"></script>
   <script>
+    const body = document.querySelector('body');
     const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+    const links = document.querySelectorAll('a');
+    
     header.innerHTML = headerContent;
+
+    if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
+      setDarkClass(true, [body, footer, header].concat(Array.from(links)));
+    }
   </script>
 </body>
 </html>

@@ -23,7 +23,10 @@
     </div>
   </footer>
   <script src="quotes.js"></script>
+  <script src="customize.js"></script>
   <script>
+    const body = document.querySelector('body');
+    const quote = document.querySelector('.quote');
     const content = document.querySelector('.quote-content');
     const details = document.querySelector('.quote-details');
     const footer = document.querySelector('footer');
@@ -32,6 +35,10 @@
 
     content.innerHTML = quotes[randomNumber].content;
     details.innerHTML = `<em> ${quotes[randomNumber].reference} </em> &#8212; ${quotes[randomNumber].author}`;
+
+    if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
+      setDarkClass(true, [body, quote, footer]);
+    }
   </script>
 </body>
 </html>

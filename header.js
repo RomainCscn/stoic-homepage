@@ -8,6 +8,10 @@ const headerContent = `
     </div>
     <div class="header-item">|</div>
     <div class="header-item">
-      <a href="resources.html">Resources</a>
+    <a href="resources.html">Resources</a>
+    </div>
+    <div class="header-item">|</div>
+    <div class="header-item">
+      <a href="customize.html">Customize</a>
     </div>
 `;
