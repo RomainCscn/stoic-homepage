@@ -42,7 +42,6 @@ h2 {
 header {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   font-weight: 200;
   margin: 0 auto 4rem;
 }
@@ -55,6 +54,7 @@ footer {
 .footer-row {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .footer-item, .header-item {
