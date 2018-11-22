@@ -39,6 +39,8 @@
     const dark = document.querySelector('#dark');
     
     nav.innerHTML = navContent;
+    const customizeLink = document.querySelector('.customize');
+    customizeLink.classList.add('active');
 
     if (localStorage.getItem('theme')) {
       localStorage.getItem('theme') === 'light' ? light.checked = true : dark.checked = true;

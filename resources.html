@@ -55,6 +55,8 @@
     const links = document.querySelectorAll('a');
     
     nav.innerHTML = navContent;
+    const resourcesLink = document.querySelector('.resources');
+    resourcesLink.classList.add('active');
 
     if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
       setDarkClass(true, [body, footer, nav].concat(Array.from(links)));

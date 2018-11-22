@@ -33,6 +33,8 @@
     const links = document.querySelectorAll('a');
 
     nav.innerHTML = navContent;
+    const aboutLink = document.querySelector('.about');
+    aboutLink.classList.add('active');
 
     if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
       setDarkClass(true, [body, footer, nav].concat(Array.from(links)));
