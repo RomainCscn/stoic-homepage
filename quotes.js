@@ -70,57 +70,57 @@ const quotes = [
     author: 'Marcus Aurelius'
   },
   {
-    content: 'Your mind will take the shape of what you frequently hold in thought, for the human spirit is colored by such impressions'
+    content: 'Your mind will take the shape of what you frequently hold in thought, for the human spirit is colored by such impressions',
     reference: 'Meditations, 5.16',
     author: 'Marcus Aurelius'
   },
   {
-    content: 'Pay close attention in conversation to what is being said, and to what follows from any action. In the action, immediately look for the target, in words, listen closely to what’s being signaled.'
+    content: 'Pay close attention in conversation to what is being said, and to what follows from any action. In the action, immediately look for the target, in words, listen closely to what’s being signaled.',
     reference: 'Meditations, 6.21',
     author: 'Marcus Aurelius'
   },
   {
-    content: 'If anyone can prove and show to me that I think and act in error, I will gladly change it—for I seek the truth, by which no one has ever been harmed. The one who is harmed is the one who abides in deceit and ignorance.'
+    content: 'If anyone can prove and show to me that I think and act in error, I will gladly change it—for I seek the truth, by which no one has ever been harmed. The one who is harmed is the one who abides in deceit and ignorance.',
     reference: 'Meditations, 7.4',
     author: 'Marcus Aurelius'
   },
   {
-    content: 'Don’t set your mind on things you don’t possess as if they were yours, but count the blessings you actually possess and think how much you would desire them if they weren’t already yours. But watch yourself, that you don’t value these things to the point of being troubled if you should lose them.'
+    content: 'Don’t set your mind on things you don’t possess as if they were yours, but count the blessings you actually possess and think how much you would desire them if they weren’t already yours. But watch yourself, that you don’t value these things to the point of being troubled if you should lose them.',
     reference: 'Meditations, 7.27',
     author: 'Marcus Aurelius'
   },
   {
-    content: 'I’m constantly amazed by how easily we love ourselves above all others, yet we put more stock in the opinions of others than in our own estimation of self. How much credence we give to the opinions our peers have of us and how little to our very own!'
+    content: 'I’m constantly amazed by how easily we love ourselves above all others, yet we put more stock in the opinions of others than in our own estimation of self. How much credence we give to the opinions our peers have of us and how little to our very own!',
     reference: 'Meditations, 12.4',
     author: 'Marcus Aurelius'
   },
   {
-    content: 'What is your vocation? To be a good person.'
+    content: 'What is your vocation? To be a good person.',
     reference: 'Meditations, 11.5',
     author: 'Marcus Aurelius'
   },
   {
-    content: 'How beautifully Plato put it. Whenever you want to talk about people, it’s best to take a bird’s-eye view and see everything all at once—of gatherings, armies, farms, weddings and divorces, births and deaths, noisy courtrooms or silent spaces, every foreign people, holidays, memorials, markets—all blended together and arranged in a pairing of opposites.'
+    content: 'How beautifully Plato put it. Whenever you want to talk about people, it’s best to take a bird’s-eye view and see everything all at once—of gatherings, armies, farms, weddings and divorces, births and deaths, noisy courtrooms or silent spaces, every foreign people, holidays, memorials, markets—all blended together and arranged in a pairing of opposites.',
     reference: 'Meditations, 7.48',
     author: 'Marcus Aurelius'
   },
   {
-    content: 'Don’t be ashamed of needing help. You have a duty to fulfill just like a soldier on the wall of battle. So what if you are injured and can’t climb up without another soldier’s help?'
+    content: 'Don’t be ashamed of needing help. You have a duty to fulfill just like a soldier on the wall of battle. So what if you are injured and can’t climb up without another soldier’s help?',
     reference: 'Meditations, 7.7',
     author: 'Marcus Aurelius'
   },
   {
-    content: 'In your actions, don’t procrastinate. In your conversations, don’t confuse. In your thoughts, don’t wander. In your soul, don’t be passive or aggressive. In your life, don’t be all about business.'
+    content: 'In your actions, don’t procrastinate. In your conversations, don’t confuse. In your thoughts, don’t wander. In your soul, don’t be passive or aggressive. In your life, don’t be all about business.',
     reference: 'Meditations, 8.51',
     author: 'Marcus Aurelius'
   },
   {
-    content: 'Receive without pride, let go without attachment'
+    content: 'Receive without pride, let go without attachment',
     reference: 'Meditations, 8.33',
     author: 'Marcus Aurelius'
   },
   {
-    content: 'Often injustice lies in what you aren’t doing, not only in what you are doing.'
+    content: 'Often injustice lies in what you aren’t doing, not only in what you are doing.',
     reference: 'Meditations, 9.5',
     author: 'Marcus Aurelius'
   },
@@ -235,7 +235,7 @@ const quotes = [
     author: 'Epictetus'
   },
   {
-    content: 'It isn’t events themselves that disturb people, but only their judgments about them.'
+    content: 'It isn’t events themselves that disturb people, but only their judgments about them.',
     reference: 'Enchiridion, 5',
     author: 'Epictetus'
   },
