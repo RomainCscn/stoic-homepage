@@ -1,20 +1,37 @@
 /** Global style **/
 
 body {
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   background-color: #F0F0DF;
+  color: #343d46;
 }
 
-a {
-  color: #3F5866;
-}
-
-a:hover {
-  color: #007BBA;
+.main {
+  margin: 0 auto;
+  max-width: 50em;
 }
 
 .container {
   max-width: 75%;
+}
+
+a {
+  color: #007BBA;
+}
+
+a:hover {
+  color: rgb(4, 82, 121);
+}
+
+h1 {
+  font-size: 1.7rem;
+  font-family: 'Playfair Display', serif;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
 }
 
 /** Footer style **/
@@ -23,12 +40,21 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  color: #3F5866;
   margin: 2rem auto;
+  font-weight: 200;
 }
 
 .footer-item {
   margin-left: 12px;
+}
+
+footer a {
+  color: #343d46;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /** Home page **/
@@ -41,6 +67,7 @@ footer {
 }
 
 .quote {
+  font-family: 'Playfair Display', serif;
   color: #343d46;
   display: flex;
   flex-direction: column;
@@ -75,6 +102,9 @@ footer {
 }
 
 @media all and (max-width: 450px) {
+  .container {
+    max-width: 90%;
+  }
   .quote-content {
     font-size: 2rem;
   }
