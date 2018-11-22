@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stoic start page</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    .main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height:100vh
+    }
+
+    .quote {
+      display: flex;
+      flex-direction: column;
+      max-width: 75%;
+    }
+
+    .quote-content {
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    .quote-details {
+      align-self: flex-end;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      text-align: end;
+    }
+
+    @media all and (max-width: 1023px) {
+      .quote {
+        max-width: 80%;
+      }
+    }
+
+    @media all and (max-width: 767px) {
+      .quote {
+        max-width: 85%;
+      }
+      .quote-content {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media all and (max-width: 450px) {
+      .quote-content {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="quote">
+      <q class="quote-content"></q>
+      <div class="quote-details"></div>
+    </div>
+  </div>
+  <script src="quotes.js"></script>
+  <script>
+    const content = document.querySelector('.quote-content');
+    const details = document.querySelector('.quote-details');
+
+    const randomNumber = Math.floor((Math.random() * quotes.length));
+
+    content.innerHTML = quotes[randomNumber].content;
+    details.innerHTML = `<em> ${quotes[randomNumber].reference} </em> &#8212; ${quotes[randomNumber].author}`;
+  </script>
+</body>
+</html>
