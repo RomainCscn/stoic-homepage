@@ -12,6 +12,7 @@ body {
 .main {
   margin: 0 auto;
   max-width: 50em;
+  padding: 0 0 2rem;
 }
 
 .container {
@@ -36,26 +37,36 @@ h2 {
   font-size: 1.2rem;
 }
 
-/** Footer style **/
+/** Footer and header style **/
 
-footer {
+header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 4rem auto 0;
   font-weight: 200;
+  margin: 0 auto 4rem;
 }
 
-.footer-item {
+footer {
+  font-weight: 200;
+  margin: 4rem auto 0;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-item, .header-item {
   margin-left: 12px;
 }
 
-footer a {
+footer a, header a {
   color: #343d46;
   text-decoration: none;
 }
 
-footer a:hover {
+header a:hover, footer a:hover {
   text-decoration: underline;
 }
 
@@ -65,7 +76,7 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 12rem);
+  min-height: calc(100vh - 13rem);
 }
 
 .quote {

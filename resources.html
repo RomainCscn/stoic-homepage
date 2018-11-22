@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Playfair+Display:400" rel="stylesheet">
 </head>
 <body>
+  <header></header>
   <section class="main">
     <h1>Stoicism resources</h1>
   
@@ -40,10 +41,13 @@
     <p>Finally, the <a href="https://www.reddit.com/r/Stoicism/wiki/faq#wiki_resources">resources section</a> on r/Stoicism faq is full of interesting one and various explanations.</p>
   </section>
   <footer class="container"></footer>
+  <script src="header.js"></script>
   <script src="footer.js"></script>
   <script>
     const footer = document.querySelector('footer');
     footer.innerHTML = footerContent;
+    const header = document.querySelector('header');
+    header.innerHTML = headerContent;
   </script>
 </body>
 </html>

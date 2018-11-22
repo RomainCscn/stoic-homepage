@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Stoic start page</title>
   <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Playfair+Display:400,400i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400|Playfair+Display:400,400i" rel="stylesheet">
 </head>
 <body>
   <section class="quote-container">
@@ -15,9 +15,22 @@
       <div class="quote-details"></div>
     </div>
   </section>
-  <footer class="container"></footer>
+  <footer class="container">
+    <div class="footer-row" style="margin-bottom: 1rem;">
+      <div class="footer-item">
+        <a href="about.html">About</a>
+      </div>
+      <div class="footer-item">|</div>
+      <div class="footer-item">
+        <a href="resources.html">Resources</a>
+      </div>
+      <div class="footer-item">|</div>
+      <div class="footer-item">
+        © Romain Cascino &#8211; 2018
+      </div>
+    </div>
+  </footer>
   <script src="quotes.js"></script>
-  <script src="footer.js"></script>
   <script>
     const content = document.querySelector('.quote-content');
     const details = document.querySelector('.quote-details');
@@ -27,8 +40,6 @@
 
     content.innerHTML = quotes[randomNumber].content;
     details.innerHTML = `<em> ${quotes[randomNumber].reference} </em> &#8212; ${quotes[randomNumber].author}`;
-
-    footer.innerHTML = footerContent;
   </script>
 </body>
 </html>
