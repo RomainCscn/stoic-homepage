@@ -123,4 +123,7 @@ header a:hover, footer a:hover {
   .quote-content {
     font-size: 1.5rem;
   }
+  .quote-details {
+    font-size: 1rem;
+  }
 }
