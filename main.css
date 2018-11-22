@@ -53,9 +53,9 @@ h2 {
   font-size: 1.2rem;
 }
 
-/** Footer and header style **/
+/** Footer and nav style **/
 
-header {
+nav {
   display: flex;
   justify-content: center;
   font-weight: 200;
@@ -73,20 +73,20 @@ footer {
   flex-wrap: wrap;
 }
 
-.header-item {
+.nav-item {
   margin-left: 12px;
 }
 
-footer a, header a {
+footer a, nav a {
   color: #343d46;
   text-decoration: none;
 }
 
-footer.dark a, header.dark a {
+footer.dark a, nav.dark a {
   color: #F0F0DF;
 }
 
-header a:hover, footer a:hover {
+nav a:hover, footer a:hover {
   text-decoration: underline;
 }
 
@@ -141,7 +141,7 @@ header a:hover, footer a:hover {
 }
 
 @media all and (max-width: 450px) {
-  .header-item {
+  .nav-item {
     margin-left: 6px;
   }
   .container {

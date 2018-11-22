@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="Description" content="The Stoic start page resources page, featuring numerous Stoicism resources.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Stoicism resources</title>
@@ -9,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Playfair+Display:400" rel="stylesheet">
 </head>
 <body>
-  <header></header>
+  <nav></nav>
   <section class="main">
     <h1>Stoicism resources</h1>
   
@@ -45,18 +46,18 @@
       © Romain Cascino &#8211; 2018
     </div>
   </footer>
-  <script src="header.js"></script>
+  <script src="nav.js"></script>
   <script src="customize.js"></script>
   <script>
     const body = document.querySelector('body');
-    const header = document.querySelector('header');
+    const nav = document.querySelector('nav');
     const footer = document.querySelector('footer');
     const links = document.querySelectorAll('a');
     
-    header.innerHTML = headerContent;
+    nav.innerHTML = navContent;
 
     if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
-      setDarkClass(true, [body, footer, header].concat(Array.from(links)));
+      setDarkClass(true, [body, footer, nav].concat(Array.from(links)));
     }
   </script>
 </body>
