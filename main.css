@@ -115,7 +115,7 @@ nav a:hover, footer a:hover {
 }
 
 .quote-content {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   word-wrap: break-word;
 }
 
@@ -185,4 +185,14 @@ nav a:hover, footer a:hover {
   .quote-details {
     font-size: 1rem;
   }
+}
+
+/** About page **/
+
+.about-message {
+  margin-top: 4rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: 'Playfair Display', serif
 }
