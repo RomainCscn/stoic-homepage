@@ -125,6 +125,46 @@ const quotes = [
     author: 'Marcus Aurelius'
   },
   {
+    content: 'It is essential for you to remember that the attention you give to any action should be in due proportion to its worth, for then you won’t tire and give up, if you aren’t busying yourself with lesser things beyond what should be allowed.',
+    reference: 'Meditations, 4.32b',
+    author: 'Marcus Aurelius'
+  },
+  {
+    content: 'What if someone despises me? Let them see to it. But I will see to it that I won’t be found doing or saying anything contemptible. What if someone hates me? Let them see to that. But I will see to it that I’m kind and good-natured to all, and prepared to show even the hater where they went wrong. Not in a critical way, or to show off my patience, but genuinely and usefully.',
+    reference: 'Meditations, 11.13',
+    author: 'Marcus Aurelius'
+  },
+  {
+    content: 'Remember that to change your mind and to follow someone’s correction are consistent with a free will. For the action is yours alone—to fulfill its purpose in keeping with your impulse and judgment, and yes, with your intelligence.',
+    reference: 'Meditations, 11.13',
+    author: 'Marcus Aurelius'
+  },
+  {
+    content: 'The person who does wrong, does wrong to themselves. The unjust person is unjust to themselves—making themselves evil.',
+    reference: 'Meditations, 9.4',
+    author: 'Marcus Aurelius'
+  },
+  {
+    content: 'The best way to avenge yourself is to not be like that.',
+    reference: 'Meditations, 6.6',
+    author: 'Marcus Aurelius'
+  },
+  {
+    content: 'There’s nothing worse than a wolf befriending sheep. Avoid false friendship at all costs. If you are good, straightforward, and well meaning it should show in your eyes and not escape notice.',
+    reference: 'Meditations, 11.15',
+    author: 'Marcus Aurelius'
+  },
+  {
+    content: 'There is no evil in things changing, just as there is no good in persisting in a new state.',
+    reference: 'Meditations, 4.42',
+    author: 'Marcus Aurelius'
+  },
+  {
+    content: 'When you are distressed by an external thing, it’s not the thing itself that troubles you, but only your judgment of it. And you can wipe this out at a moment’s notice.',
+    reference: 'Meditations, 8.47',
+    author: 'Marcus Aurelius'
+  },
+  {
     content: 'Everything has two handles. One by which it can be carried and another by which it cannot.',
     reference: 'Enchiridion, 43',
     author: 'Epictetus'
@@ -140,7 +180,7 @@ const quotes = [
     author: 'Epictetus'
   },
   {
-    content: 'Do not wish for events to turn out as you desire but rather wish for them to happen as they do and your life will go smoothly. ',
+    content: 'Don’t seek for everything to happen as you wish it would, but rather wish that everything happens as it actually will—then your life will flow well.',
     reference: 'Enchiridion, 8',
     author: 'Epictetus'
   },
@@ -255,6 +295,26 @@ const quotes = [
     author: 'Epictetus'
   },
   {
+    content: 'You can bind up my leg, but not even Zeus has the power to break my freedom of choice.',
+    reference: 'Discourses, 1.1.23',
+    author: 'Epictetus'
+  },
+  {
+    content: 'Consider who you are. Above all, a human being, carrying no greater power than your own reasoned choice, which oversees all other things, and is free from any other master.',
+    reference: 'Discourses, 2.10.1',
+    author: 'Epictetus'
+  },
+  {
+    content: 'Don’t trust in your reputation, money, or position, but in the strength that is yours—namely, your judgments about the things that you control and don’t control. For this alone is what makes us free and unfettered, that picks us up by the neck from the depths and lifts us eye to eye with the rich and powerful.',
+    reference: 'Discourses, 3.26.34–35',
+    author: 'Epictetus'
+  },
+  {
+    content: 'In short, you must remember this—that if you hold anything dear outside of your own reasoned choice, you will have destroyed your capacity for choice.',
+    reference: 'Discourses, 4.4.23',
+    author: 'Epictetus'
+  },
+  {
     content: 'Everywhere means nowhere. When a person spends all his time in foreign travel, he ends by having many acquaintances, but no friends.',
     reference: 'Letters to Lucilius, 2',
     author: 'Seneca'
@@ -350,6 +410,31 @@ const quotes = [
     author: 'Seneca'
   },
   {
+    content: 'It’s ruinous for the soul to be anxious about the future and miserable in advance of misery, engulfed by anxiety that the things it desires might remain its own until the very end. For such a soul will never be at rest—by longing for things to come it will lose the ability to enjoy present things.',
+    reference: 'Moral letters, 98.5b–6a',
+    author: 'Seneca'
+  },
+  {
+    content: 'Therefore, explain why a wise person shouldn’t get drunk—not with words, but by the facts of its ugliness and offensiveness. It’s most easy to prove that so-called pleasures, when they go beyond proper measure, are but punishments.',
+    reference: 'Moral letters, 83.27,
+    author: 'Seneca'
+  },
+  {
+    content: 'No person has the power to have everything they want, but it is in their power not to want what they don’t have, and to cheerfully put to good use what they do have.',
+    reference: 'Moral letters, 123.3,
+    author: 'Seneca'
+  },
+  {
+    content: 'The rational soul is stronger than any kind of fortune—from its own share it guides its affairs here or there, and is itself the cause of a happy or miserable life.',
+    reference: 'Moral letters, 98.2b,
+    author: 'Seneca'
+  },
+  {
+    content: 'Leisure without study is death—a tomb for the living person',
+    reference: 'Moral letters, 82.4,
+    author: 'Seneca'
+  },
+  {
     content: 'From good people you’ll learn good, but if you mingle with the bad you’ll destroy such soul as you had.',
     reference: 'Lectures, 11.53.21-22',
     author: 'Musonius Rufus'
@@ -360,8 +445,13 @@ const quotes = [
     author: 'Musonius Rufus'
   },
   {
-    content: 'How much better is it to be known for doing well by many than for living extravagantly? How much more worthy than spending on sticks and stones is it to spend on people',
+    content: 'How much better is it to be known for doing well by many than for living extravagantly? How much more worthy than spending on sticks and stones is it to spend on people.',
     reference: 'Lectures, 19.91.26–28',
+    author: 'Musonius Rufus'
+  },
+  {
+    content: 'As for me, I would choose being sick over living in luxury, for being sick only harms the body, whereas luxury destroys both the body and the soul, causing weakness and incapacity in the body, and lack of control and cowardice in the soul. What’s more, luxury breeds injustice because it also breeds greediness.',
+    reference: 'Lectures, 20.95.14–17',
     author: 'Musonius Rufus'
   },
 ];
