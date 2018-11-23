@@ -165,6 +165,26 @@ const quotes = [
     author: 'Marcus Aurelius'
   },
   {
+    content: 'If someone is slipping up, kindly correct them and point out what they missed. But if you can’t, blame yourself—or no one.',
+    reference: 'Meditations, 10.4',
+    author: 'Marcus Aurelius'
+  },
+  {
+    content: 'Let each thing you would do, say or intend be like that of a dying person.',
+    reference: 'Meditations, 2.11.1',
+    author: 'Marcus Aurelius'
+  },
+  {
+    content: 'Think of the whole universe of matter and how small your share. Think about the expanse of time and how brief—almost momentary—the part marked for you. Think of the workings of fate and how infinitesimal your role.',
+    reference: 'Meditations, 5.24',
+    author: 'Marcus Aurelius'
+  },
+  {
+    content: 'It’s a disgrace in this life when the soul surrenders first while the body refuses to.',
+    reference: 'Meditations, 6.29',
+    author: 'Marcus Aurelius'
+  },
+  {
     content: 'Everything has two handles. One by which it can be carried and another by which it cannot.',
     reference: 'Enchiridion, 43',
     author: 'Epictetus'
@@ -405,6 +425,11 @@ const quotes = [
     author: 'Seneca'
   },
   {
+    content: 'Many times an old man has no other evidence besides his age to prove he has lived a long time.',
+    reference: 'On tranquility of mind, 3.8b',
+    author: 'Seneca'
+  },
+  {
     content: 'Silence is a lesson learned from the many sufferings of life.',
     reference: 'Thyestes, 309',
     author: 'Seneca'
@@ -425,8 +450,18 @@ const quotes = [
     author: 'Seneca'
   },
   {
+    content: '“Let us prepare our minds as if we’d come to the very end of life. Let us postpone nothing. Let us balance life’s books each day. . . . The one who puts the finishing touches on their life each day is never short of time.',
+    reference: 'Moral letters, 101.7b–8a',
+    author: 'Seneca'
+  },
+  {
     content: 'The rational soul is stronger than any kind of fortune—from its own share it guides its affairs here or there, and is itself the cause of a happy or miserable life.',
     reference: 'Moral letters, 98.2b',
+    author: 'Seneca'
+  },
+  {
+    content: 'It’s better to conquer grief than to deceive it.',
+    reference: 'Consolation to Helvia, 17.1b',
     author: 'Seneca'
   },
   {

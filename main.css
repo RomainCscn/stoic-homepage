@@ -116,7 +116,15 @@ nav a:hover, footer a:hover {
 
 .quote-content {
   font-size: 2.5rem;
-  text-align: center;
+  word-wrap: break-word;
+}
+
+.quote-content.medium {
+  font-size: 2.2rem;
+}
+
+.quote-content.long {
+  font-size: 2rem;
 }
 
 .quote-details {
@@ -133,6 +141,13 @@ nav a:hover, footer a:hover {
   .quote-content {
     font-size: 2.2rem;
   }
+  .quote-content.medium {
+    font-size: 2rem;
+  }
+  
+  .quote-content.long {
+    font-size: 1.8rem;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -141,6 +156,13 @@ nav a:hover, footer a:hover {
   }
   .quote-content {
     font-size: 2rem;
+  }
+  .quote-content.medium {
+    font-size: 1.8rem;
+  }
+  
+  .quote-content.long {
+    font-size: 1.6rem;
   }
 }
 
@@ -152,7 +174,13 @@ nav a:hover, footer a:hover {
     max-width: 90%;
   }
   .quote-content {
+    font-size: 1.8rem;
+  }
+  .quote-content.medium {
     font-size: 1.5rem;
+  }
+  .quote-content.long {
+    font-size: 1.3rem;
   }
   .quote-details {
     font-size: 1rem;
