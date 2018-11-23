@@ -416,22 +416,22 @@ const quotes = [
   },
   {
     content: 'Therefore, explain why a wise person shouldn’t get drunk—not with words, but by the facts of its ugliness and offensiveness. It’s most easy to prove that so-called pleasures, when they go beyond proper measure, are but punishments.',
-    reference: 'Moral letters, 83.27,
+    reference: 'Moral letters, 83.27',
     author: 'Seneca'
   },
   {
     content: 'No person has the power to have everything they want, but it is in their power not to want what they don’t have, and to cheerfully put to good use what they do have.',
-    reference: 'Moral letters, 123.3,
+    reference: 'Moral letters, 123.3',
     author: 'Seneca'
   },
   {
     content: 'The rational soul is stronger than any kind of fortune—from its own share it guides its affairs here or there, and is itself the cause of a happy or miserable life.',
-    reference: 'Moral letters, 98.2b,
+    reference: 'Moral letters, 98.2b',
     author: 'Seneca'
   },
   {
     content: 'Leisure without study is death—a tomb for the living person',
-    reference: 'Moral letters, 82.4,
+    reference: 'Moral letters, 82.4',
     author: 'Seneca'
   },
   {
