@@ -33,19 +33,33 @@
     const details = document.querySelector('.quote-details');
     const footer = document.querySelector('footer');
 
-    const randomNumber = Math.floor((Math.random() * quotes.length));
-
-    if (quotes[randomNumber].content.length > 200 && quotes[randomNumber].content.length < 250) {
-      content.classList.add('medium');
-    } else if (quotes[randomNumber].content.length >= 250) {
-      content.classList.add('long');
-    };
-
-    content.innerHTML = quotes[randomNumber].content;
-    details.innerHTML = `<em> ${quotes[randomNumber].reference} </em> &#8212; ${quotes[randomNumber].author}`;
+    if (localStorage.getItem('lifespan') === 'long' 
+      && localStorage.getItem('quote')
+      && localStorage.getItem('date') === new Date().toDateString()) {
+      insertQuote(JSON.parse(localStorage.getItem('quote')));
+    } else if (localStorage.getItem('lifespan') === 'long') {
+      const randomNumber = Math.floor((Math.random() * quotes.length));
+      insertQuote(quotes[randomNumber]);
+      localStorage.setItem('quote', JSON.stringify(quotes[randomNumber]));
+      localStorage.setItem('date', new Date().toDateString());
+    } else {
+      const randomNumber = Math.floor((Math.random() * quotes.length));
+      insertQuote(quotes[randomNumber]);
+    }
 
     if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
       setDarkClass(true, [body, quote, footer]);
+    }
+
+    function insertQuote(quote) {
+      if (quote.content.length > 200 && quote.content.length < 250) {
+        content.classList.add('medium');
+      } else if (quote.content.length >= 250) {
+        content.classList.add('long');
+      };
+
+      content.innerHTML = quote.content;
+      details.innerHTML = `<em> ${quote.reference} </em> &#8212; ${quote.author}`;
     }
   </script>
   <script src="fathom.js"></script>
