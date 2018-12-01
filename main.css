@@ -134,6 +134,13 @@ nav a:hover, footer a:hover {
   text-align: end;
 }
 
+#refresh {
+  height: 18px; 
+  margin-right: 1rem;
+  padding-top: 2px;
+  cursor: pointer;
+}
+
 @media all and (max-width: 1023px) {
   .container {
     max-width: 80%;

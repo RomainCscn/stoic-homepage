@@ -20,6 +20,9 @@
   <footer class="container">
     <div class="footer-row" style="margin-bottom: 1rem;">
       <div>
+        <img id="refresh" src="./refresh_dark.svg"/>
+      </div>
+      <div>
         <a href="about.html">More...</a>
       </div>
     </div>
@@ -32,6 +35,7 @@
     const content = document.querySelector('.quote-content');
     const details = document.querySelector('.quote-details');
     const footer = document.querySelector('footer');
+    const refresh = document.querySelector('#refresh');
 
     if (localStorage.getItem('lifespan') === 'long' 
       && localStorage.getItem('quote')
@@ -49,14 +53,29 @@
 
     if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
       setDarkClass(true, [body, quote, footer]);
+      refresh.src = "./refresh_light.svg"
     }
+
+    refresh.addEventListener('click', () => {
+      const randomNumber = Math.floor((Math.random() * quotes.length));
+      insertQuote(quotes[randomNumber]);
+      if (localStorage.getItem('lifespan') === 'long') {
+        localStorage.setItem('quote', JSON.stringify(quotes[randomNumber]));
+        localStorage.setItem('date', new Date().toDateString());
+      }
+    });
 
     function insertQuote(quote) {
       if (quote.content.length > 200 && quote.content.length < 250) {
+        content.classList.remove('long');
         content.classList.add('medium');
       } else if (quote.content.length >= 250) {
+        content.classList.remove('medium');
         content.classList.add('long');
-      };
+      } else {
+        content.classList.remove('medium');
+        content.classList.remove('long');
+      }
 
       content.innerHTML = quote.content;
       details.innerHTML = `<em> ${quote.reference} </em> &#8212; ${quote.author}`;
