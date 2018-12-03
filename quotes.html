@@ -15,10 +15,16 @@
   <section class="main">
     <h1>Quotes list</h1>
     <div class="quotes-filter">
-      <label for="author-filter">Filter by author:</label>
-      <select name="author" id="author-filter">
-        <option value="All">All</option>
-      </select>
+      <div>
+        <label for="author-filter">Filter by author:</label>
+        <select name="author" id="author-filter">
+          <option value="All">All</option>
+        </select>
+      </div>
+      <div>
+        <label for="book-filter">Filter by book:</label>
+        <select name="book" id="book-filter"></select>
+      </div>
     </div>
     <div class="quotes-container"></div>
   </section>
@@ -37,6 +43,7 @@
     const links = document.querySelectorAll('a');
     const quotesContainer = document.querySelector('.quotes-container');
     const authorFilter = document.querySelector('#author-filter');
+    const bookFilter = document.querySelector('#book-filter');
     
     nav.innerHTML = navContent;
     const resourcesLink = document.querySelector('.resources');
@@ -60,18 +67,27 @@
       authorFilter.appendChild(authorDivElement);
     });
 
+    // Insert all books in the book filter
+    populateBookFilter([...new Set(quotes.map((quote) => quote.reference.split(',')[0]))]);
+
     authorFilter.addEventListener('change', (e) => {
-      if (e.target.value === 'All') {
-        quotesContainer.innerHTML = '';
-        quotes.forEach(quote => {
-          createQuoteDivElement(quote);
-        });
-      } else {
-        quotesContainer.innerHTML = '';
-        quotes.filter((quote) => quote.author === e.target.value).forEach(quote => {
-          createQuoteDivElement(quote);
-        });
-      }
+      const author = e.target.value;
+      populateBookFilter([...new Set(returnQuotesByAuthor(author)
+        .map((quote) => quote.reference.split(',')[0])
+      )]);
+      quotesContainer.innerHTML = '';
+      returnQuotesByAuthor(author).forEach(quote => {
+        createQuoteDivElement(quote);
+      });
+    });
+
+    bookFilter.addEventListener('change', (e) => {
+      const book = e.target.value;
+      const author = authorFilter.value;
+      quotesContainer.innerHTML = '';
+      returnQuotesByBook(book, author).forEach(quote => {
+        createQuoteDivElement(quote);
+      });
     });
 
     function createQuoteDivElement(quote) {
@@ -99,6 +115,40 @@
         return 1;
       }
       return 0;
+    }
+
+    function populateBookFilter(books) {
+      bookFilter.innerHTML = '';
+
+      if (books.length > 1) {
+        const allOption = document.createElement('option');
+        allOption.innerHTML = 'All';
+        allOption.value = 'All';
+        bookFilter.appendChild(allOption);
+      }
+
+      books.forEach((book) => {
+        const bookDivElement = document.createElement('option');
+        bookDivElement.innerHTML = book;
+        bookDivElement.value = book;
+        bookFilter.appendChild(bookDivElement);
+      });
+    }
+
+    function returnQuotesByAuthor(author) {
+      if (author === 'All') {
+        return quotes;
+      } else {
+        return quotes.filter((quote) => quote.author === author);
+      }
+    }
+
+    function returnQuotesByBook(book, author) {
+      if (book === 'All') {
+        return returnQuotesByAuthor(author);
+      } else {
+        return returnQuotesByAuthor(author).filter((quote) => quote.reference.split(',')[0] === book);
+      }
     }
   </script>
   <script src="fathom.js"></script>
