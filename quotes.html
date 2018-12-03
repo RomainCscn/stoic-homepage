@@ -15,7 +15,7 @@
   <section class="main">
     <h1>Quotes list</h1>
     <div class="quotes-filter">
-      <div>
+      <div class="author-filter-container">
         <label for="author-filter">Filter by author:</label>
         <select name="author" id="author-filter">
           <option value="All">All</option>
@@ -49,9 +49,9 @@
     const resourcesLink = document.querySelector('.resources');
     resourcesLink.classList.add('active');
 
-    if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
-      setDarkClass(true, [body, footer, nav].concat(Array.from(links)));
-    }
+    // if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
+    //   setDarkClass(true, [body, footer, nav].concat(Array.from(links)));
+    // }
 
     quotes.sort(sortByReferenceAndAuthor);
 
