@@ -223,3 +223,20 @@ nav a:hover, footer a:hover {
   font-size: 1.1rem;
   font-family: 'Playfair Display', serif
 }
+
+/** All quotes page **/
+
+.all-quote-container {
+  margin: 3rem 0; 
+  font-family: 'Playfair Display', serif
+}
+
+.all-quote-reference {
+  text-align: right;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.all-quote-content {
+  font-size: 1.2rem;
+}
