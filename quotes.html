@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Description" content="The Stoic homepage complete quotes list.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quotes list</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Playfair+Display:400" rel="stylesheet">
+</head>
+<body>
+  <nav></nav>
+  <section class="main">
+    <h1>Quotes list</h1>
+    <div class="quotes-filter">
+      <div>
+        <label for="author-filter">Filter by author:</label>
+        <select name="author" id="author-filter">
+          <option value="All">All</option>
+        </select>
+      </div>
+      <div>
+        <label for="book-filter">Filter by book:</label>
+        <select name="book" id="book-filter"></select>
+      </div>
+    </div>
+    <div class="quotes-container"></div>
+  </section>
+  <footer class="container">
+    <div class="footer-row">
+      © Romain Cascino &#8211; 2018
+    </div>
+  </footer>
+  <script src="quotes.js"></script>
+  <script src="nav.js"></script>
+  <script src="customize.js"></script>
+  <script>
+    const body = document.querySelector('body');
+    const nav = document.querySelector('nav');
+    const footer = document.querySelector('footer');
+    const links = document.querySelectorAll('a');
+    const quotesContainer = document.querySelector('.quotes-container');
+    const authorFilter = document.querySelector('#author-filter');
+    const bookFilter = document.querySelector('#book-filter');
+    
+    nav.innerHTML = navContent;
+    const resourcesLink = document.querySelector('.resources');
+    resourcesLink.classList.add('active');
+
+    if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
+      setDarkClass(true, [body, footer, nav].concat(Array.from(links)));
+    }
+
+    quotes.sort(sortByReferenceAndAuthor);
+
+    quotes.forEach(quote => {
+      createQuoteDivElement(quote);
+    });
+
+    const authors = [...new Set(quotes.map((quote) => quote.author))];
+    authors.forEach((author) => {
+      const authorDivElement = document.createElement('option');
+      authorDivElement.innerHTML = author;
+      authorDivElement.value = author;
+      authorFilter.appendChild(authorDivElement);
+    });
+
+    // Insert all books in the book filter
+    populateBookFilter([...new Set(quotes.map((quote) => quote.reference.split(',')[0]))]);
+
+    authorFilter.addEventListener('change', (e) => {
+      const author = e.target.value;
+      populateBookFilter([...new Set(returnQuotesByAuthor(author)
+        .map((quote) => quote.reference.split(',')[0])
+      )]);
+      quotesContainer.innerHTML = '';
+      returnQuotesByAuthor(author).forEach(quote => {
+        createQuoteDivElement(quote);
+      });
+    });
+
+    bookFilter.addEventListener('change', (e) => {
+      const book = e.target.value;
+      const author = authorFilter.value;
+      quotesContainer.innerHTML = '';
+      returnQuotesByBook(book, author).forEach(quote => {
+        createQuoteDivElement(quote);
+      });
+    });
+
+    function createQuoteDivElement(quote) {
+      const quoteContainer = document.createElement('div');
+      quoteContainer.classList.add('all-quote-container');
+      const quoteContent = document.createElement('div');
+      quoteContent.classList.add('all-quote-content');
+      const quoteReference = document.createElement('div');
+      quoteReference.classList.add('all-quote-reference');
+      quoteContent.innerHTML = quote.content;
+      quoteReference.innerHTML = quote.reference + ' &#8212; ' + quote.author;
+      quoteContainer.appendChild(quoteContent);
+      quoteContainer.appendChild(quoteReference);
+      quotesContainer.appendChild(quoteContainer);
+    }
+
+    function sortByReferenceAndAuthor(a, b) {
+      const referenceA = a.author.toUpperCase() + a.reference.toUpperCase();
+      const referenceB = b.author.toUpperCase() + b.reference.toUpperCase();
+
+      if (referenceA < referenceB) {
+        return -1;
+      }
+      if (referenceA > referenceB) {
+        return 1;
+      }
+      return 0;
+    }
+
+    function populateBookFilter(books) {
+      bookFilter.innerHTML = '';
+
+      if (books.length > 1) {
+        const allOption = document.createElement('option');
+        allOption.innerHTML = 'All';
+        allOption.value = 'All';
+        bookFilter.appendChild(allOption);
+      }
+
+      books.forEach((book) => {
+        const bookDivElement = document.createElement('option');
+        bookDivElement.innerHTML = book;
+        bookDivElement.value = book;
+        bookFilter.appendChild(bookDivElement);
+      });
+    }
+
+    function returnQuotesByAuthor(author) {
+      if (author === 'All') {
+        return quotes;
+      } else {
+        return quotes.filter((quote) => quote.author === author);
+      }
+    }
+
+    function returnQuotesByBook(book, author) {
+      if (book === 'All') {
+        return returnQuotesByAuthor(author);
+      } else {
+        return returnQuotesByAuthor(author).filter((quote) => quote.reference.split(',')[0] === book);
+      }
+    }
+  </script>
+  <script src="fathom.js"></script>
+</body>
+</html>
