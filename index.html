@@ -31,11 +31,17 @@
   <script src="customize.js"></script>
   <script>
     const body = document.querySelector('body');
-    const quote = document.querySelector('.quote');
+    const quoteContainer = document.querySelector('.quote');
     const content = document.querySelector('.quote-content');
     const details = document.querySelector('.quote-details');
     const footer = document.querySelector('footer');
     const refresh = document.querySelector('#refresh');
+
+    quoteContainer.classList.add('show');
+    setTimeout(() => {
+      quoteContainer.classList.remove('show');
+      quoteContainer.style.opacity = 1;
+    }, 1000);
 
     if (localStorage.getItem('lifespan') === 'long' 
       && localStorage.getItem('quote')
@@ -52,18 +58,22 @@
     }
 
     if (localStorage.getItem('theme') && localStorage.getItem('theme') ===  'dark') {
-      setDarkClass(true, [body, quote, footer]);
+      setDarkClass(true, [body, quoteContainer, footer]);
       refresh.src = "./refresh_light.svg"
     }
 
-    refresh.addEventListener('click', () => {
+    refresh.addEventListener('click', refreshQuote);
+
+    function refreshQuote() {
+      refresh.removeEventListener('click', refreshQuote);
+      quoteContainer.classList.add('hide-show');
       const randomNumber = Math.floor((Math.random() * quotes.length));
-      insertQuote(quotes[randomNumber]);
+      setTimeout(insertQuote, 500, quotes[randomNumber]);
       if (localStorage.getItem('lifespan') === 'long') {
         localStorage.setItem('quote', JSON.stringify(quotes[randomNumber]));
         localStorage.setItem('date', new Date().toDateString());
       }
-    });
+    }
 
     function insertQuote(quote) {
       if (quote.content.length > 200 && quote.content.length < 250) {
@@ -79,6 +89,10 @@
 
       content.innerHTML = quote.content;
       details.innerHTML = `<em> ${quote.reference} </em> &#8212; ${quote.author}`;
+      setTimeout(() => {
+        quoteContainer.classList.remove('hide-show');
+        refresh.addEventListener('click', refreshQuote);
+      }, 500);
     }
   </script>
   <script src="fathom.js"></script>
