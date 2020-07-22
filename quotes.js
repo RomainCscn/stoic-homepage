@@ -450,7 +450,7 @@ const quotes = [
     author: 'Seneca'
   },
   {
-    content: '“Let us prepare our minds as if we’d come to the very end of life. Let us postpone nothing. Let us balance life’s books each day. . . . The one who puts the finishing touches on their life each day is never short of time.',
+    content: 'Let us prepare our minds as if we’d come to the very end of life. Let us postpone nothing. Let us balance life’s books each day. . . . The one who puts the finishing touches on their life each day is never short of time.',
     reference: 'Moral letters, 101.7b–8a',
     author: 'Seneca'
   },
